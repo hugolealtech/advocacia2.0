@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ClientComponent } from './components/client/client.component';
 import { MasterComponent } from './components/master/master.component';
 import { ReportsComponent } from './components/reports/reports.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export const routes: Routes = [
   {path:'', component:AppComponent},
@@ -15,6 +17,8 @@ export const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'client', component:ClientComponent},
   {path:'master',component:MasterComponent},
-  {path:'reports', component:ReportsComponent}
+  {path:'reports', component:ReportsComponent},
+  {path:'navbar', component:NavbarComponent},
+  {path:'footer', component:FooterComponent}
 
 ];

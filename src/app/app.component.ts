@@ -7,6 +7,8 @@ import { MasterComponent } from './components/master/master.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MatSlideToggleModule} from '@angular/material/slide-toggle'
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -20,7 +22,9 @@ import { MatSlideToggleModule} from '@angular/material/slide-toggle'
     ReportsComponent,
     SignupComponent,
     MatSlideToggleModule,
-  ],
+    NavbarComponent,
+    FooterComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

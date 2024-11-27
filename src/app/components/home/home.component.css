@@ -1,76 +1,124 @@
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
-.b-example-divider {
+.carousel-item {
   width: 100%;
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  /* Faz a imagem ocupar 100% da largura do carrossel */
+  height: 290px;
+  /* Ajuste a altura do carrossel */
+  object-fit: cover;
+  /* Mantém a imagem sem distorção */
 }
 
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
+.carousel-item img {
+  width: 100%;
+  /* Faz a imagem ocupar 100% da largura do carrossel */
+  height: 100%;
+  /* Ajusta a altura da imagem ao tamanho do item */
+  object-fit: cover;
+  /* Mantém a imagem sem distorção */
 }
 
-.bi {
-  vertical-align: -.125em;
-  fill: currentColor;
-}
-
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
-}
-
-.nav-scroller .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
+/* Ajuste de texto para a legenda */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  /* Distância do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  /* Cor do texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Adiciona sombra ao texto para melhor legibilidade */
+  padding: 0 10px;
+  /* Espaçamento horizontal */
+  max-width: 90%;
+  /* Limita a largura máxima do texto */
   text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  /* Alinha o texto ao centro */
 }
 
-.btn-bd-primary {
-  --bd-violet-bg: #712cf9;
-  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-  --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: var(--bd-violet-bg);
-  --bs-btn-border-color: var(--bd-violet-bg);
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: #6528e0;
-  --bs-btn-hover-border-color: #6528e0;
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #5a23c8;
-  --bs-btn-active-border-color: #5a23c8;
+/* Ajustando o tamanho da fonte do título e do parágrafo */
+.carousel-caption h1 {
+  font-size: 1.0rem;
+  /* Ajuste o tamanho conforme necessário */
+  font-weight: 600;
+  /* Deixa o título em negrito */
+  margin-bottom: 10px;
+  /* Espaço abaixo do título */
 }
 
-.bd-mode-toggle {
-  z-index: 1500;
+.carousel-caption p {
+  font-size: 0.8rem;
+  /* Ajuste o tamanho conforme necessário */
+  opacity: 0.75;
+  /* Opacidade do texto */
+  margin-bottom: 20px;
+  /* Espaço abaixo do parágrafo */
 }
 
-.bd-mode-toggle .dropdown-menu .active .bi {
-  display: block !important;
+/* Botão */
+.carousel-caption a {
+  font-size: 0.9rem;
+  /* Tamanho do texto do botão */
+  padding: 10px 20px;
+  /* Ajusta o tamanho do botão */
+  background-color: rgba(121, 121, 121, 0.4);
+  /* Cor de fundo com transparência */
+  border-radius: 5px;
+  /* Bordas arredondadas */
+  color: white;
+  /* Cor do texto do botão */
+  text-decoration: none;
+  /* Remove o sublinhado */
+  border: none;
+  /* Remove a borda */
+  backdrop-filter: blur(8px);
+  /* Efeito de desfoque no fundo do botão */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  /* Sombra suave para um efeito flutuante */
+}
+
+/* Alteração no efeito de hover */
+.carousel-caption a:hover {
+  background-color: #79797999;
+  /* Cor do botão mais intensa quando em hover */
+  backdrop-filter: blur(12px);
+  /* Aumenta o desfoque no hover */
+}
+
+/* Ajuste nos ícones de navegação */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px;
+  /* Largura do ícone */
+  height: 30px;
+  /* Altura do ícone */
+  background-color: transparent;
+  /* Remove o fundo */
+}
+
+.carousel-control-prev-icon i,
+.carousel-control-next-icon i {
+  font-size: 0.5rem;
+  /* Tamanho do ícone */
+  color: white;
+  /* Cor do ícone */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(25, 0, 0, 0.8);
+  /* Fundo mais escuro ao passar o mouse */
+}
+
+/* Exemplo de imagem de fundo em CSS (local):
+.carousel-item {
+    background-image: url('/assets/images/exemplo.jpg');
+    background-size: cover;
+    background-position: center;
+} */
+
+/* Exemplo de imagem de fundo em CSS (externa): */
+.carousel-item {
+  background-image: url('https://i.pinimg.com/736x/34/2c/be/342cbeb402458d09929f86f3085c5468.jpg');
+  background-size: cover;
+  background-position: center;
 }
